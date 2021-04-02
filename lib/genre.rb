@@ -8,7 +8,7 @@ class Genre
 
     def initialize(name)
         @name = name
-        save
+        #save
     end
 
     def save
@@ -23,7 +23,7 @@ class Genre
         @@all.clear
     end
 
-    def self.create(new_genre)
+    def self.create(name)
         new_genre = Genre.new(name)
         new_genre.save
         new_genre
