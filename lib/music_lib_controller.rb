@@ -21,7 +21,22 @@ class MusicLibraryController
         input = gets.strip
         call unless input == "exit"
 
+        case input
+        when "list songs"
+            list_songs
+        when "list artists"
+            list_artists
+        when "list genres"
+            list_genres
+        when "list artist"
+            list_songs_by_artist
+        when "list genre"
+            list_songs_by_genre
+        when "play song"
+            play_song
+        
 
+        end
     
     end
 
@@ -84,13 +99,6 @@ class MusicLibraryController
           song = song_list[input-1]
           puts "Playing #{song.name} by #{song.artist.name}"
         end
-    #     def list_songs
-    #         songs_sorted = Song.all.sort{ |a, b| a.name <=> b.name } 
-    #         songs_sorted.each.with_index(1) do |song, index|
-    #           puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
-    #         end        
-    #   end
-
     end
 
 
